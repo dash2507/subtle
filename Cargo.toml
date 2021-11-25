@@ -24,6 +24,9 @@ exclude = [
 [badges]
 travis-ci = { repository = "dalek-cryptography/subtle", branch = "master"}
 
+[dependencies]
+parity-scale-codec = { version = "2.0", default-features = false, features = ["derive"] }
+
 [dev-dependencies]
 rand = { version = "0.7" }
 

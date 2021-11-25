@@ -86,9 +86,11 @@
 #[cfg(feature = "std")]
 #[macro_use]
 extern crate std;
+extern crate parity_scale_codec;
 
 use core::ops::{BitAnd, BitAndAssign, BitOr, BitOrAssign, BitXor, BitXorAssign, Neg, Not};
 use core::option::Option;
+use parity_scale_codec::{Encode, Decode};
 
 /// The `Choice` struct represents a choice for use in conditional assignment.
 ///
@@ -107,7 +109,7 @@ use core::option::Option;
 ///
 /// [rust-timing-shield]:
 /// https://www.chosenplaintext.ca/open-source/rust-timing-shield/security
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, Encode, Decode)]
 pub struct Choice(u8);
 
 impl Choice {
