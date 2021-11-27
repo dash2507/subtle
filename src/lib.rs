@@ -111,7 +111,7 @@ use serde::{Deserialize, Serialize};
 ///
 /// [rust-timing-shield]:
 /// https://www.chosenplaintext.ca/open-source/rust-timing-shield/security
-#[derive(Copy, Clone, Debug, Encode, Decode, Serialize, Deserialize)]
+#[derive(Copy, Clone, Debug, Encode, Decode, Serialize, Deserialize, PartialEq)]
 pub struct Choice(u8);
 
 impl Choice {
