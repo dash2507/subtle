@@ -1,13 +1,14 @@
 [package]
-name = "subtle"
+name = "parity-subtle"
 # Before incrementing:
 # - update CHANGELOG
 # - update html_root_url
 # - update README if necessary by semver
 # - if any updates were made to the README, also update the module documentation in src/lib.rs
-version = "2.4.1"
+version = "0.1.0"
 authors = ["Isis Lovecruft <isis@patternsinthevoid.net>",
-           "Henry de Valence <hdevalence@hdevalence.ca>"]
+           "Henry de Valence <hdevalence@hdevalence.ca>",
+           'NoCtrlZ<shinsaku.ashizawa@artree.co.jp>']
 readme = "README.md"
 license = "BSD-3-Clause"
 repository = "https://github.com/dalek-cryptography/subtle"
