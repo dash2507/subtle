@@ -1,10 +1,10 @@
 extern crate rand;
-extern crate subtle;
+extern crate parity_subtle;
 
 use rand::rngs::OsRng;
 use rand::RngCore;
 
-use subtle::*;
+use parity_subtle::*;
 
 #[test]
 #[should_panic]

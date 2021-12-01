@@ -2,10 +2,10 @@
 
 #[macro_use]
 extern crate libfuzzer_sys;
-extern crate subtle;
+extern crate parity_subtle;
 extern crate core;
 
-use subtle::ConditionallySelectable;
+use parity_subtle::ConditionallySelectable;
 
 fuzz_target!(|data: &[u8]| {
     for y in data.iter() {

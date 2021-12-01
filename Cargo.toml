@@ -5,7 +5,7 @@ name = "parity-subtle"
 # - update html_root_url
 # - update README if necessary by semver
 # - if any updates were made to the README, also update the module documentation in src/lib.rs
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Isis Lovecruft <isis@patternsinthevoid.net>",
            "Henry de Valence <hdevalence@hdevalence.ca>",
            'NoCtrlZ<shinsaku.ashizawa@artree.co.jp>']
@@ -27,14 +27,13 @@ travis-ci = { repository = "dalek-cryptography/subtle", branch = "master"}
 
 [dependencies]
 parity-scale-codec = { version = "2.0", default-features = false, features = ["derive"] }
-serde = { version = "1.0.130", features = ["derive"] }
+serde = { version = "1.0.130", default-features = false, features = ["derive"] }
 
 [dev-dependencies]
 rand = { version = "0.7" }
 
 [features]
-default = ["std", "i128"]
-std = []
+default = ["i128"]
 i128 = []
 # DEPRECATED: As of 2.4.1, this feature does nothing.
 nightly = []

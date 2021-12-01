@@ -83,9 +83,6 @@
 //! [docs]: https://docs.rs/subtle
 //! [rust-timing-shield]: https://www.chosenplaintext.ca/open-source/rust-timing-shield/security
 
-#[cfg(feature = "std")]
-#[macro_use]
-extern crate std;
 extern crate parity_scale_codec;
 extern crate serde;
 
@@ -245,7 +242,7 @@ impl From<u8> for Choice {
 /// # Example
 ///
 /// ```
-/// use subtle::ConstantTimeEq;
+/// use parity_subtle::ConstantTimeEq;
 /// let x: u8 = 5;
 /// let y: u8 = 13;
 ///
@@ -276,7 +273,7 @@ impl<T: ConstantTimeEq> ConstantTimeEq for [T] {
     /// Since arrays coerce to slices, this function works with fixed-size arrays:
     ///
     /// ```
-    /// # use subtle::ConstantTimeEq;
+    /// # use parity_subtle::ConstantTimeEq;
     /// #
     /// let a: [u8; 8] = [0,1,2,3,4,5,6,7];
     /// let b: [u8; 8] = [0,1,2,3,0,1,2,3];
@@ -370,8 +367,8 @@ pub trait ConditionallySelectable: Copy {
     /// # Example
     ///
     /// ```
-    /// # extern crate subtle;
-    /// use subtle::ConditionallySelectable;
+    /// # extern crate parity_subtle;
+    /// use parity_subtle::ConditionallySelectable;
     /// #
     /// # fn main() {
     /// let x: u8 = 13;
@@ -392,8 +389,8 @@ pub trait ConditionallySelectable: Copy {
     /// # Example
     ///
     /// ```
-    /// # extern crate subtle;
-    /// use subtle::ConditionallySelectable;
+    /// # extern crate parity_subtle;
+    /// use parity_subtle::ConditionallySelectable;
     /// #
     /// # fn main() {
     /// let mut x: u8 = 13;
@@ -418,8 +415,8 @@ pub trait ConditionallySelectable: Copy {
     /// # Example
     ///
     /// ```
-    /// # extern crate subtle;
-    /// use subtle::ConditionallySelectable;
+    /// # extern crate parity_subtle;
+    /// use parity_subtle::ConditionallySelectable;
     /// #
     /// # fn main() {
     /// let mut x: u8 = 13;
@@ -749,8 +746,8 @@ pub trait ConstantTimeGreater {
     /// # Example
     ///
     /// ```
-    /// # extern crate subtle;
-    /// use subtle::ConstantTimeGreater;
+    /// # extern crate parity_subtle;
+    /// use parity_subtle::ConstantTimeGreater;
     ///
     /// let x: u8 = 13;
     /// let y: u8 = 42;
@@ -833,8 +830,8 @@ pub trait ConstantTimeLess: ConstantTimeEq + ConstantTimeGreater {
     /// # Example
     ///
     /// ```
-    /// # extern crate subtle;
-    /// use subtle::ConstantTimeLess;
+    /// # extern crate parity_subtle;
+    /// use parity_subtle::ConstantTimeLess;
     ///
     /// let x: u8 = 13;
     /// let y: u8 = 42;
