@@ -1,11 +1,11 @@
 [package]
-name = "parity-subtle"
+name = "fullcodec-subtle"
 # Before incrementing:
 # - update CHANGELOG
 # - update html_root_url
 # - update README if necessary by semver
 # - if any updates were made to the README, also update the module documentation in src/lib.rs
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Isis Lovecruft <isis@patternsinthevoid.net>",
            "Henry de Valence <hdevalence@hdevalence.ca>",
            'NoCtrlZ<shinsaku.ashizawa@artree.co.jp>']
