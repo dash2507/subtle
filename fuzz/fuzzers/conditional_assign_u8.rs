@@ -2,8 +2,8 @@
 
 #[macro_use]
 extern crate libfuzzer_sys;
-extern crate parity_subtle;
 extern crate core;
+extern crate subtle as parity_subtle;
 
 use parity_subtle::ConditionallySelectable;
 
